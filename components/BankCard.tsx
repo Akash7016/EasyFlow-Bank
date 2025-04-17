@@ -5,7 +5,7 @@ import React from "react";
 
 const BankCard = ({
   account,
-  userName = "Adrian",
+  userName,
   showBalance = true,
 }: CreditCardProps) => {
   return (
@@ -14,7 +14,7 @@ const BankCard = ({
         <div className="bank-card_content">
           <div>
             <h1 className="text-16 font-semibold text-white">
-              {account.name || userName}
+              {userName}
             </h1>
             <p className="font-ibm-plex-serif font-black text-white">
               {formatAmount(account.currentBalance)}
